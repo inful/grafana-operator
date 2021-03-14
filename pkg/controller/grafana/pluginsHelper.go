@@ -17,6 +17,7 @@ type PluginsHelperImpl struct {
 func newPluginsHelper() *PluginsHelperImpl {
 	insecureTransport := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		Proxy: http.ProxyFromEnvironment,
 	}
 
 	helper := new(PluginsHelperImpl)
