@@ -132,7 +132,7 @@ type GrafanaDataSourceJsonData struct {
 	LogAnalyticsClientId         string `json:"logAnalyticsClientId,omitempty"`
 	LogAnalyticsSubscriptionId   string `json:"logAnalyticsSubscriptionId,omitempty"`
 	LogAnalyticsTenantId         string `json:"logAnalyticsTenantId,omitempty"`
-	SubscriptionId               string `json:"subscriptionI,omitempty"`
+	SubscriptionId               string `json:"subscriptionId,omitempty"`
 	TenantId                     string `json:"tenantId,omitempty"`
 	// Fields for InfluxDB data sources
 	HTTPMode      string `json:"httpMode,omitempty"`
@@ -144,6 +144,7 @@ type GrafanaDataSourceJsonData struct {
 	DerivedFields []GrafanaDataSourceJsonDerivedFields `json:"derivedFields,omitempty"`
 	// Fields for Prometheus data sources
 	CustomQueryParameters string `json:"customQueryParameters,omitempty"`
+	HTTPMethod            string `json:"httpMethod,omitempty"`
 }
 
 type GrafanaDataSourceJsonDerivedFields struct {
